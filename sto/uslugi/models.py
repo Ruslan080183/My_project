@@ -44,3 +44,22 @@ class TechObsluz(models.Model):
     class Meta:
         verbose_name = 'Вид ТО'
         verbose_name_plural = 'Виды ТО'
+
+class Diagnostika(models.Model):
+    DIAGNO_CHOICES = [
+        ("1", "Диагностика подвески"),
+        ("2", "Диагностика двигателя"),
+        ("3", "Диагностика турбин"),
+        ("4", "Диагностика электрооборудования"),
+        ("5", "Компьютерная диагностика"),
+
+    ]
+    diagn = models.CharField("Диагностика", max_length=200)
+    vid_diagn = models.CharField("Вид дагностики", max_length=200, choices=DIAGNO_CHOICES, default="1")
+    repair_description_diagn = models.TextField("Описание")
+
+    def __str__(self):
+        return self.vid_diagn
+    class Meta:
+        verbose_name = 'Вид диагностики'
+        verbose_name_plural = 'Виды диагностики'

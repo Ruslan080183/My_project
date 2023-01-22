@@ -1,6 +1,6 @@
 
 from django.views.generic import ListView
-from .models import RemontAvto, TechObsluz
+from .models import RemontAvto, TechObsluz, Diagnostika
 
 
 class RemontAvtoListView(ListView):
@@ -10,3 +10,7 @@ class RemontAvtoListView(ListView):
 class TechObsluzListView(ListView):
     model = TechObsluz
     template_name = 'index2.html'
+
+class DiagnostikaListView(ListView):
+    model = Diagnostika
+    template_name = 'index3.html'
