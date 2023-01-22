@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<div>
+{% extends 'uslugi/base.html' %}
+
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+
+    <div>
         {% for object in object_list %}
 
 
@@ -16,5 +18,5 @@
         {% endfor %}
 
     </div>
-</body>
-</html>
+
+{% endblock %}

@@ -1,20 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<div>
+{% extends 'uslugi/base.html' %}
+
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+
+    <div>
         {% for object in object_list %}
 
 
             <h3>{{ object.diagn }}</h3>
             <p>{{ object.vid_diagn }}</p>
             <p>{{ object.repair_description_diagn }}</p>
+    </div>
 
         {% endfor %}
 
-    </div>
-</body>
-</html>
+{% endblock %}
+
+
+
+
+

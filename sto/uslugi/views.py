@@ -5,12 +5,19 @@ from .models import RemontAvto, TechObsluz, Diagnostika
 
 class RemontAvtoListView(ListView):
     model = RemontAvto
-    template_name = 'index.html'
+    template_name = 'uslugi/index.html'
 
 class TechObsluzListView(ListView):
     model = TechObsluz
-    template_name = 'index2.html'
+    template_name = 'uslugi/index2.html'
 
 class DiagnostikaListView(ListView):
     model = Diagnostika
-    template_name = 'index3.html'
+    template_name = 'uslugi/index3.html'
+class DiagnostikaListView1(ListView):
+    model = Diagnostika
+    template_name = 'uslugi/base.html'
+
+class DiagnostikaListView2(ListView):
+    model = Diagnostika
+    template_name = 'uslugi/contakt.html'
