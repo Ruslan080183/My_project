@@ -21,3 +21,26 @@ class RemontAvto(models.Model):
     class Meta:
         verbose_name = 'Вид ремонта'
         verbose_name_plural = 'Виды ремонта'
+class TechObsluz(models.Model):
+    TECHNO_CHOICES = [
+        ("1", "Развал-схождение"),
+        ("2", "Шиномонтаж"),
+        ("3", "Замена масла"),
+        ("4", "Замена ремня ГРМ"),
+        ("5", "Замена фильтров"),
+        ("6", "Замена фильтров"),
+        ("7", "Замена сцепления"),
+        ("8", "Замена тормозной жидкости"),
+        ("9", "Замена антифриза"),
+        ("10", "Замена приводных ремней"),
+        ("10", "Замена ремня генератора"),
+    ]
+    tech = models.CharField("ТО", max_length=200)
+    vid_tech = models.CharField("Вид ТО", max_length=200, choices=TECHNO_CHOICES, default="1")
+    repair_description_tech = models.TextField("Описание")
+
+    def __str__(self):
+        return self.vid_tech
+    class Meta:
+        verbose_name = 'Вид ТО'
+        verbose_name_plural = 'Виды ТО'

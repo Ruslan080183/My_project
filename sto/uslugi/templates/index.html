@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        {% for object in object_list %}
+
+            <h3>{{ object.remont }}</h3>
+            <p>{{ object.vid_remonta }}</p>
+            <p>{{ object.repair_description_avto }}</p>
+            <h3>{{ object.tech }}</h3>
+            <p>{{ object.vid_tech }}</p>
+            <p>{{ object.repair_description_tech }}</p>
+
+        {% endfor %}
+
+    </div>
+</body>
+</html>
