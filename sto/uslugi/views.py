@@ -1,11 +1,32 @@
 
 from django.views.generic import ListView
 from .models import RemontAvto, TechObsluz, Diagnostika
+from .forms import RemontAvtoForm, TechObsluzForm, DiagnostikaForm
+from django.shortcuts import render
 
+
+def home_view(request):
+    context = {}
+    context['form'] = RemontAvtoForm()
+    return render(request, "uslugi/ind1.html", context)
+
+def home_view1(request):
+    context = {}
+    context['form'] = TechObsluzForm()
+    return render(request, "uslugi/ind21.html", context)
+
+def home_view2(request):
+    context = {}
+    context['form'] = DiagnostikaForm()
+    return render(request, "uslugi/ind31.html", context)
 
 class RemontAvtoListView(ListView):
     model = RemontAvto
     template_name = 'uslugi/index.html'
+
+
+
+
 
 class TechObsluzListView(ListView):
     model = TechObsluz

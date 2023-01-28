@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from uslugi.views import RemontAvtoListView, TechObsluzListView, DiagnostikaListView, DiagnostikaListView1,DiagnostikaListView2
+from uslugi.views import home_view, home_view1, home_view2, RemontAvtoListView, TechObsluzListView, DiagnostikaListView, DiagnostikaListView1, DiagnostikaListView2
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -26,5 +26,8 @@ urlpatterns = [
     path('index3/', DiagnostikaListView.as_view()),
     path('', DiagnostikaListView1.as_view()),
     path('contakt/', DiagnostikaListView2.as_view()),
+    path('ind1/', home_view),
+    path('ind21/', home_view1),
+    path('ind31/', home_view2),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
