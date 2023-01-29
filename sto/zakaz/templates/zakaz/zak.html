@@ -1,0 +1,26 @@
+{% extends 'uslugi/base.html' %}
+
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1>ЗАПИСАТЬСЯ</h1>
+    <form action="{% url 'zak2' %}" method="POST">
+        {% csrf_token %}
+        <label>Имя</label>
+        <input type="text" name="user">
+        <label>Номер телефона</label>
+        <input type="text" name="tel">
+        <label>Дата</label>
+        <input type="date" name="time">
+        <label>Марка и модель авто</label>
+        <input type="text" name="cars">
+        <button type="submit">Записаться</button>
+    </form>
+
+
+
+
+{% endblock %}
