@@ -15,8 +15,10 @@
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 border-bottom">
         <h5 style="color: red" class="my-0 mr-md-auto font-weight-normal"> <img src="{% static 'uslugi/img/cluch.png' %}"width="90" height="90">СТО "Мустанг"</h5>
         <nav class="my-2 my-md-0 mr-md-3">
+
              <a  class="p-2 text-dark" href="http://127.0.0.1:8000/" ><i class="fa-sharp fa-solid fa-car"></i>Главная</a>
              <a class="py-2 text-dark"  href="http://127.0.0.1:8000/contakt/"><i class="fa-sharp fa-solid fa-phone"></i>Контакты</a>
+
         </nav>
     </div>
      <aside>
@@ -27,11 +29,14 @@
     <main>
 
      {% block content %}
-
-        <a class="py-2 text-dark"  href="http://127.0.0.1:8000/index/"><big><strong>Ремонт</strong></big></a>
-        <a class="py-2 text-dark"  href="http://127.0.0.1:8000/index2/"><big><strong>Техобслуживание</strong></big></a>
-        <a class="py-2 text-dark"  href="http://127.0.0.1:8000/index3/"><big><strong>Диагностика</strong></big></a>
-        <p><a class="py-2 text-dark"  href="http://127.0.0.1:8000/zak/"><big><strong>Записаться</strong></big></a></p>
+     <div class="alert alert-warning mt-2">
+        <ul>
+            <li><a class="py-2 text-dark"  href="http://127.0.0.1:8000/index/"><big><strong>Ремонт</strong></big></a></li>
+            <li><a class="py-2 text-dark"  href="http://127.0.0.1:8000/index2/"><big><strong>Техобслуживание</strong></big></a></li>
+            <li><a class="py-2 text-dark"  href="http://127.0.0.1:8000/index3/"><big><strong>Диагностика</strong></big></a></li>
+            <li><p><a class="py-2 text-dark"  href="http://127.0.0.1:8000/zak/"><big><strong>Записаться</strong></big></a></p></li>
+         </ul>
+     </div>
            {% endblock %}
      </main>
 </body>

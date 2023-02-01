@@ -9,15 +9,16 @@
     <h1>ЗАПИСАТЬСЯ</h1>
     <form action="{% url 'zak2' %}" method="POST">
         {% csrf_token %}
+
         <label>Имя</label>
-        <input type="text" name="user">
-        <label>Номер телефона</label>
-        <input type="text" name="tel">
-        <label>Дата</label>
-        <input type="date" name="time">
+        <p><input type="text" name="user"></p>
+        <p><label>Номер телефона</label><p/>
+        <p><input type="text" name="tel"></p>
+        <p><label>Дата</label></p>
+        <p><input type="date" name="time"></p>
         <label>Марка и модель авто</label>
-        <input type="text" name="cars">
-        <button type="submit">Записаться</button>
+        <p><input type="text" name="cars"></p>
+        <p><button type="submit">Записаться</button></p>
     </form>
 
 
