@@ -1,5 +1,5 @@
 
-from .views import  home_view, home_view1, home_view2, RemontAvtoListView, TechObsluzListView, DiagnostikaListView, DiagnostikaListView1, DiagnostikaListView2
+from .views import home_view, home_view1, home_view2, RemontAvtoListView, TechObsluzListView, DiagnostikaListView, DiagnostikaListView1, DiagnostikaListView2
 from django.urls import path
 
 urlpatterns = [

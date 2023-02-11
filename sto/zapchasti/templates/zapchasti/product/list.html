@@ -1,0 +1,39 @@
+{% extends 'uslugi/base.html' %}
+{% load static %}
+
+{% block title %}
+ Запчасти
+{% endblock %}
+
+{% block content %}
+
+  <div id="sidebar">
+        <h3>Категории</h3>
+        <ul>
+            <li {% if not category %}class="selected"{% endif %}>
+                <a href="{% url 'product_list' %}">All</a>
+                </li>
+            {% for c in categories %}
+                <li {% if category.slug == c.slug %}class="selected"{% endif %}>
+                    <a href="{% url 'product_list_by_category' % }">{{ c.name }}</a>
+                </li>
+            {% endfor %}
+
+        <ul/>
+  </div>
+  <div id="main" class="product-list">
+        <h1>{% if category %}{{ category.name }}{% else %}
+            Товар{% endif %}</h1>
+        {% for product in products %}
+            <div class="item">
+                <a href="{{ product }}">
+                    <img src="
+                            {% if product.image %}{{ product.image.url }}{% else %}{% static "zapchasti/img/no_image.png" %}{% endif %}">
+                </a>
+                <a href="{% url 'product_detail' % }">{{ product.name }}</a><br>
+                ${{ product.price }}
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
