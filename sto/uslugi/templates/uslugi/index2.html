@@ -1,0 +1,21 @@
+{% extends 'uslugi/base.html' %}
+
+
+{% block title %}
+Техобслуживание
+{% endblock %}
+
+{% block content %}
+
+    <div>
+        {% for object in object_list %}
+
+
+            <h3>{{ object.tech }}</h3>
+            <p>{{ object.repair_description_tech }}</p>
+
+        {% endfor %}
+            <a class="py-2 text-dark"  href="http://127.0.0.1:8000/ind21/"><big><strong>Виды техобслуживания</strong></big></a>
+    </div>
+
+{% endblock %}
